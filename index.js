@@ -6,7 +6,6 @@ const app = express();
 // app.engine("html", ejs.renderFile);
 // app.set("views", "public");
 // app.set("views engine", "html");
-app.listen(process.env.PORT || 8080, () => {console.log(process.env.PORT)});
 
 app.use(express.static("public"));
 
@@ -22,3 +21,5 @@ app.get("/", (req, res) => {
 app.get("/favicon.ico", (req, res) => {
     res.end();
 });
+
+app.listen(process.env.PORT || 8080, () => {console.log(process.env.PORT)});
